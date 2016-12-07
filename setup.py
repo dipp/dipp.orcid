@@ -1,13 +1,8 @@
 #!/usr/bin/env python
-#
-# Setup script for the dipp library
-#
-# Usage: python setup.py install
-#
 
 from setuptools import setup, find_packages
 
-__version__ = '0.1.1'
+__version__ = '0.1'
 
 def _read(doc):
     return open(doc, 'rb').read()
@@ -19,6 +14,7 @@ setup(name='dipp.orcid',
       # Get more strings from http://www.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
         "Programming Language :: Python",
+        "Programming Language :: Python :: 2.6",
         "Topic :: Software Development :: Libraries :: Python Modules",
         ],
       keywords='',
@@ -37,7 +33,7 @@ setup(name='dipp.orcid',
       ],
      entry_points={
         'console_scripts':[
-            'dippDataCite=dipp.datacite.datacite:main',
+            'orcid=dipp.orcid.orcid:main',
           ]  
      },
      )
